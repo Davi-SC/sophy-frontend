@@ -21,6 +21,7 @@ export default function Footer() {
                         width={40} 
                         height={40} 
                         className="mr-3 rounded-full object-cover" 
+                        loading="eager"
                     />
                     {/* Usando o mesmo text-rose-300 do cabeçalho */}
                     Sophy<span className="text-rose-300">Store</span>
@@ -35,9 +36,7 @@ export default function Footer() {
                     <ul className="flex flex-col space-y-3 text-sm text-gray-400">
                     {/* O hover agora usa a sua cor text-rose-300 */}
                     <li><Link href="/produtos" className="hover:text-rose-300 transition-colors">Nossos Produtos</Link></li>
-                    <li><Link href="/categorias" className="hover:text-rose-300 transition-colors">Categorias</Link></li>
-                    <li><Link href="/sobre" className="hover:text-rose-300 transition-colors">Sobre a Sophy</Link></li>
-                    {/* <li><Link href="/trocas" className="hover:text-rose-300 transition-colors">Trocas e Devoluções</Link></li> */}
+                    <li><Link href="https://wa.me/559991983229?text=Gostaria de saber sobre as trocas e devoluções!" target="_blank" className="hover:text-rose-300 transition-colors">Trocas e Devoluções</Link></li>
                     </ul>
                 </div>
                 {/* COLUNA 3: Contato */}
@@ -45,13 +44,9 @@ export default function Footer() {
                     <h3 className="text-lg font-semibold mb-4 text-gray-200">Fale Conosco</h3>
                     <ul className="flex flex-col space-y-3 text-sm text-gray-400">
                     <li>
-                        <span className="block font-medium text-gray-300">WhatsApp:</span> 
-                        <a href="#" className="hover:text-rose-300 transition-colors">(11) 99999-9999</a>
+                        <span className="block font-medium text-gray-300">WhatsApp:</span>
+                        <a href="https://wa.me/559991983229" target="_blank" className="hover:text-rose-300 transition-colors">(99) 99198-3229</a>
                     </li>
-                    {/* <li>
-                        <span className="block font-medium text-gray-300">Email:</span>
-                        <a href="mailto:contato@sophystore.com.br" className="hover:text-rose-300 transition-colors">contato@sophystore.com.br</a>
-                    </li> */}
                     <li>
                         <span className="block font-medium text-gray-300">Horário:</span>
                         Seg a Sex, 9h às 18h
@@ -63,12 +58,6 @@ export default function Footer() {
                 {/* LINHA DIVISÓRIA E COPYRIGHT */}
                 <div className="border-t border-gray-800 pt-4 mt-4 flex flex-col md:flex-row justify-center items-center text-sm text-gray-500">
                 <p>&copy; {new Date().getFullYear()} Sophy Store. Todos os direitos reservados.</p>
-                
-                {/* Pequenos links extras de rodapé */}
-                {/* <div className="flex space-x-4 mt-4 md:mt-0">
-                    <Link href="/privacidade" className="hover:text-rose-300 transition-colors">Política de Privacidade</Link>
-                    <Link href="/termos" className="hover:text-rose-300 transition-colors">Termos de Serviço</Link>
-                </div> */}
             </div>
         </div>
         </footer>

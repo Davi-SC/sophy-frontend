@@ -1,5 +1,7 @@
 import Link from "next/link";   // substitui <a> para navegação rápida
 import Image from 'next/image'; // substitui <img>
+import { User } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 
 export default function Header() {
     return (
@@ -9,29 +11,30 @@ export default function Header() {
                 {/* Logo */}
                 <div className="flex items-center">
                     <Link href="/" className="flex items-center text-2x1 font-bold text-gray-800 tracking-tighter">
-                        <Image src="/logo_sophy.jpg" alt="Sophy StoreLogo" width={60} height={60} className="mr-3 rounded-full object-cover" />
+                        <Image src="/logo_sophy.jpg" alt="Sophy StoreLogo" width={60} height={60} className="mr-3 rounded-full object-cover" loading="eager"/>
                         Sophy<span className="text-rose-300">Store</span>
                     </Link>
                 </div>
 
                 {/*menu de navegação*/}
-                <nav className="hidden md:flex space-x-8">
+                {/* <nav className="hidden md:flex space-x-8">
                     <Link href="/produtos" className="text-gray-600 hover:text-rose-300 transition-colors">Produtos</Link>
                     <Link href="/categorias" className="text-gray-600 hover:text-rose-300 transition-colors">Categorias</Link>
-                    <Link href="/sobre" className="text-gray-600 hover:text-rose-300 transition-colors">Sobre Nós</Link>   
-                </nav>
+                    <Link href="/sobre" className="text-gray-600 hover:text-rose-300 transition-colors">Sobre Nós</Link> 
+                </nav> */}
 
                 {/* ícones de ação: carrinho e perfil */}
-                <div className="flex items-center space-x-8">
-                    {/* Exemplo de botão do carrinho com a nova cor no hover */}
-                    <button className="text-gray-600 hover:text-rose-300 transition-colors">
-                        {/* Aqui futuramente vai o ícone do carrinho */}
+                <div className="flex items-center gap-6">
+                    <Link href="/produtos" className="px-5 py-2.5 bg-rose-400 text-white font-medium rounded-full hover:bg-rose-500 transition-all">
+                        Produtos
+                    </Link>
+                    {/* <Link href="/carrinho" className="flex items-center gap-2 text-gray-600 hover:text-rose-500 transition-colors">
+                        <ShoppingCart size={18} />
                         Carrinho
-                    </button>
-                    <button className="text-gray-600 hover:text-rose-300 transition-colors">
-                        {/* Aqui futuramente vai o ícone de login/perfil */}
-                        Login
-                    </button>
+                    </Link> */}
+                    <Link href="/" className="text-gray-400 hover:text-gray-600 transition-colors" title="Área administrativa">
+                        <User size={16} />
+                    </Link>
                 </div>
 
             </div>
